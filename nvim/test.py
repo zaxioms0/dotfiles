@@ -1,4 +1,0 @@
-'''
-hi
-'''
-print("hello world")
