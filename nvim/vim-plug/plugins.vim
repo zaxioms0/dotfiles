@@ -10,18 +10,22 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    
+
     " File Explorer
     Plug 'scrooloose/NERDTree'
     
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
+
+    "Linting
+    Plug 'dense-analysis/ale'
     
-    " Status Bar
-    Plug 'itchyny/lightline.vim'
-    let g:lightline = {
-      \ 'colorscheme': 'dracula',
-      \ }   
+    "Status
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    let g:airline_theme='dracula'
+    let g:airline#extensions#ale#enabled = 1
+    
     
     " Themes
     Plug 'dracula/vim',{'as':'dracula'}
