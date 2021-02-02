@@ -17,9 +17,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
 
-    "Linting
-    Plug 'dense-analysis/ale'
-    
     "Status
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -30,6 +27,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Themes
     Plug 'dracula/vim',{'as':'dracula'}
     Plug 'romainl/flattened',{'as':'flattened'}
+    
+    " Long bois
+    source $HOME/.config/nvim/vim-plug/plugins/ale.vim
+    source $HOME/.config/nvim/vim-plug/plugins/coc.vim
 
     call plug#end()
 
