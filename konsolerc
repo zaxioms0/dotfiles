@@ -6,10 +6,17 @@ ShowMenuBarByDefault=false
 
 [MainWindow]
 DP-0 DP-2 Height 1440=1376
-DP-0 DP-2 Width 2560=2520
+DP-0 DP-2 Width 2560=1255
 DP-0 DP-2 XPosition=2580
 DP-0 DP-2 YPosition=44
+DP-0 Height 1440=1376
+DP-0 Width 2560=2520
+DP-2 DP-0 Height 1440=1376
+DP-2 DP-0 Width 2560=2520
+DP-2 DP-0 XPosition=20
+DP-2 DP-0 YPosition=44
+DP-2 Height 1440=1376
+DP-2 Width 2560=2520
 MenuBar=Disabled
-RestorePositionForNextInstance=false
 State=AAAA/wAAAAD9AAAAAAAACdgAAAVgAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled

@@ -17,20 +17,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
 
-    "Status
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    let g:airline_theme='dracula'
-    let g:airline#extensions#ale#enabled = 1
-    
+    Plug 'ryanoasis/vim-devicons'
     
     " Themes
     Plug 'dracula/vim',{'as':'dracula'}
     Plug 'romainl/flattened',{'as':'flattened'}
-    
+   
+    Plug 'rust-lang/rust.vim'
     " Long bois
     source $HOME/.config/nvim/vim-plug/plugins/ale.vim
     source $HOME/.config/nvim/vim-plug/plugins/coc.vim
+    source $HOME/.config/nvim/vim-plug/plugins/airline.vim
 
-    call plug#end()
+call plug#end()
 

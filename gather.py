@@ -8,6 +8,9 @@ with open("loc.json") as f:
 for item in data.items():
     path = expandvars(item[1])
 
+    # I know I'll come back to this freaked out
+    # The remove lines are only to remove duplicate
+    # copies in the repository, dw :)
     if isdir(path):
         shutil.rmtree(item[0], True)
         shutil.copytree(path, item[0])
