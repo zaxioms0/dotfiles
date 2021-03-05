@@ -28,6 +28,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     source $HOME/.config/nvim/vim-plug/plugins/ale.vim
     source $HOME/.config/nvim/vim-plug/plugins/coc.vim
     source $HOME/.config/nvim/vim-plug/plugins/airline.vim
-
+    source $HOME/.config/nvim/vim-plug/plugins/black.vim
+    source $HOME/.config/nvim/vim-plug/plugins/emmet.vim
 call plug#end()
 

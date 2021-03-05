@@ -1,6 +1,6 @@
 font:
   normal:
-    family: "MesloLGS NF"
+    family: "Fira Code"
 
   bold:
     family: "MesloLGS NF"
@@ -14,7 +14,7 @@ font:
     family: "MesloLGS NF"
     style: Bold Italic
 
-  size: 10
+  size: 5
 
 colors:
   primary:
@@ -26,6 +26,7 @@ colors:
   vi_mode_cursor:
     text: CellBackground
     cursor: CellForeground
+  background_opacity: .8
   search:
     matches:
       foreground: '0x44475a'
