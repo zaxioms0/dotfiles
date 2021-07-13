@@ -3,5 +3,6 @@
     "konsolerc":"$HOME/.config/konsolerc",
     "i3":"$HOME/.config/i3",
     "i3status":"$HOME/.config/i3status",
-    "alacritty":"$HOME/.config/alacritty"
+    "alacritty":"$HOME/.config/alacritty",
+    "rofi":"$HOME/.config/rofi"
 }
