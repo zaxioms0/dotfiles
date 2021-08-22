@@ -4,5 +4,6 @@
     "i3":"$HOME/.config/i3",
     "i3status":"$HOME/.config/i3status",
     "alacritty":"$HOME/.config/alacritty",
-    "rofi":"$HOME/.config/rofi"
+    "rofi":"$HOME/.config/rofi",
+    ".tmux.conf":"$HOME/.tmux.conf"
 }

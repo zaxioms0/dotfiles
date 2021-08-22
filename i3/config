@@ -37,9 +37,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Shift+Return exec alacritty
 bindsym $mod+Return exec konsole
-
+bindsym $mod+Shift+Return exec alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -206,3 +205,10 @@ bar {
 
 # Custom Keybinds
 bindsym $mod+Shift+f exec brave
+bindsym $mod+Shift+s exec spotify
+bindsym $mod+Shift+d exec discord
+bindsym $mod+Shift+x exec xournalpp
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%-
+
+
