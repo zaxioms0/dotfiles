@@ -204,10 +204,11 @@ bar {
 }
 
 # Custom Keybinds
-bindsym $mod+Shift+f exec brave
+bindsym $mod+Shift+f exec google-chrome-stable
 bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+d exec discord
 bindsym $mod+Shift+x exec xournalpp
+bindsym $mod+Shift+o exec zathura
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%-
 
