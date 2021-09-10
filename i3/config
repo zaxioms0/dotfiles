@@ -126,7 +126,7 @@ bindsym $mod+3 workspace number $ws3
 bindsym $mod+4 workspace number $ws4
 bindsym $mod+5 workspace number $ws5
 bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 worspace number $ws7
+bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
@@ -204,11 +204,11 @@ bar {
 }
 
 # Custom Keybinds
-bindsym $mod+Shift+f exec google-chrome-stable
-bindsym $mod+Shift+s exec spotify
-bindsym $mod+Shift+d exec discord
-bindsym $mod+Shift+x exec xournalpp
-bindsym $mod+Shift+o exec zathura
+bindsym $mod+Shift+f exec --no-startup-id google-chrome-stable
+bindsym $mod+Shift+s exec --no-startup-id spotify
+bindsym $mod+Shift+d exec --no-startup-id discord
+bindsym $mod+Shift+x exec --no-startup-id xournalpp
+bindsym $mod+Shift+o exec --no-startup-id zathura
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%-
 

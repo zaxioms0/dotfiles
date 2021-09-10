@@ -60,7 +60,7 @@ load {
 }
 
 memory {
-        format = "MEM %percentage_used"
+        format = "MEN %percentage_used"
         threshold_degraded = "10%"
         format_degraded = "MEMORY: %free"
 }
