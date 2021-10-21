@@ -32,4 +32,3 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     source $HOME/.config/nvim/vim-plug/plugins/emmet.vim
     source $HOME/.config/nvim/vim-plug/plugins/vimtex.vim
 call plug#end()
-

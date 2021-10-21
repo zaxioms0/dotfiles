@@ -203,6 +203,10 @@ bar {
   position top
 }
 
+
+# exec_always --no-startup-id $HOME/.config/polybar/polybar-collection/launch.sh
+
+
 # Custom Keybinds
 bindsym $mod+Shift+f exec --no-startup-id google-chrome-stable
 bindsym $mod+Shift+s exec --no-startup-id spotify
