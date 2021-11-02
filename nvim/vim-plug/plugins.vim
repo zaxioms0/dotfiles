@@ -25,7 +25,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
    
     Plug 'rust-lang/rust.vim'
     " Long bois
-    source $HOME/.config/nvim/vim-plug/plugins/ale.vim
+    " source $HOME/.config/nvim/vim-plug/plugins/ale.vim
     source $HOME/.config/nvim/vim-plug/plugins/coc.vim
     source $HOME/.config/nvim/vim-plug/plugins/airline.vim
     source $HOME/.config/nvim/vim-plug/plugins/black.vim
