@@ -5,5 +5,7 @@
     "i3status":"$HOME/.config/i3status",
     "alacritty":"$HOME/.config/alacritty",
     "rofi":"$HOME/.config/rofi",
-    ".tmux.conf":"$HOME/.tmux.conf"
+    ".tmux.conf":"$HOME/.tmux.conf",
+    "kitty":"$HOME/.config/kitty",
+    "picom":"$HOME/.config/picom"
 }
