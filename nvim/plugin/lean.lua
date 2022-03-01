@@ -55,7 +55,7 @@ require('lean').setup{
   -- Enable suggested mappings?
   --
   -- false by default, true to enable
-  mappings = false,
+  mappings = true,
 
   -- Infoview support
   infoview = {
@@ -88,7 +88,9 @@ require('lean').setup{
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = true,
-    virtual_text = { spacing = 4 },
+    virtual_text = false,
     update_in_insert = true,
+    sign = true,
   }
 )
+

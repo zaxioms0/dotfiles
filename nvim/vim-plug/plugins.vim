@@ -4,6 +4,8 @@ call plug#begin()
     Plug 'morhetz/gruvbox'   
     Plug 'ryanoasis/vim-devicons'
 
+    Plug 'rust-lang/rust.vim'
+
     Plug 'itchyny/lightline.vim'
     Plug 'shinchu/lightline-gruvbox.vim'
 
@@ -13,5 +15,7 @@ call plug#begin()
     source /home/zaxioms/.config/nvim/vim-plug/plugins/sml.vim
     source /home/zaxioms/.config/nvim/vim-plug/plugins/lean.vim
     source /home/zaxioms/.config/nvim/vim-plug/plugins/vimtex.vim
+
+    source /home/zaxioms/.config/nvim/vim-plug/plugins/trouble.vim
     source /home/zaxioms/.config/nvim/vim-plug/plugins/lspconfig.vim
 call plug#end()

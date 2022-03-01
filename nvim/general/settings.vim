@@ -1,8 +1,10 @@
 " set leader key
 let g:mapleader = "\<Space>"
+let g:maplocalleader = "\<Space>\<Space>"
 
 syntax enable                           " Enables syntax highlighing
 filetype plugin indent on
+filetype plugin on
 colorscheme dracula
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
