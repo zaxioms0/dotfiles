@@ -1,1 +1,0 @@
-Plug 'Julian/lean.nvim'
