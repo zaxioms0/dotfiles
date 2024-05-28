@@ -15,6 +15,13 @@ return {
             filters = {
                 custom = {".DS_Store"},
             },
+            diagnostics = { enable = true },
+            git = {
+                enable = true,
+                ignore = false,
+                timeout = 500,
+            },
+
         })
 
         local keymap = vim.keymap

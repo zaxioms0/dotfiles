@@ -1,5 +1,8 @@
 return {
     "neovim/nvim-lspconfig",
+    opts = {
+        inlay_hints = { enabled = false },
+    },
     event = {"BufReadPre", "BufNewFile"},
     dependencies = {
         "hrsh7th/nvim-cmp"
@@ -27,6 +30,12 @@ return {
             vim.keymap.set({"n", "v"}, "<leader>fm", vim.lsp.buf.format)
 
             vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+
+            vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+                vim.lsp.diagnostic.on_publish_diagnostics, {
+                    virtual_text = false
+                }
+            )
         end
         
         local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -36,24 +45,21 @@ return {
             on_attach = on_attach
         }
 
-        lspconfig.pylyzer.setup {
+        lspconfig.ocamllsp.setup {
             capabilities = capabilities,
-            on_attach = on_attach,
-            handlers = {
-                ['textDocument/publishDiagnostics'] = function() end
-            }
+            on_attach = on_attach
+
         }
 
         vim.g.rustaceanvim = function()
             return {
-                -- other rustacean settings. --
                 server = {
                 on_attach = function()
                     on_attach()
                     vim.keymap.set("n", "<leader>ca", function() vim.cmd.RustLsp { "codeAction" } end, { buffer = bufnr })
-
-                -- other settings. -- 
+                    vim.keymap.set("n", "<leader>E", function() vim.cmd.RustLsp { "explainError" } end, { buffer = bufnr })
                 end
+
                 }
             }
         end
