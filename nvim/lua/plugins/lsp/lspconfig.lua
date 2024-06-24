@@ -14,7 +14,8 @@ return {
 
             opts.desc = "Show LSP References"
             keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
-            keymap.set("n", "gT", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+            keymap.set("n", "gt", vim.lsp.buf.definition, opts)
+            keymap.set("n", "gT", "<cmd> tab split | lua vim.lsp.buf.definition() <CR>", opts)
 
             opts.desc = "smart rename"
             keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
@@ -27,6 +28,12 @@ return {
             vim.keymap.set({"n", "v"}, "<leader>fm", vim.lsp.buf.format)
 
             vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+            
+            vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+                vim.lsp.diagnostic.on_publish_diagnostics, {
+                    virtual_text = false
+                }
+            )
         end
 
         local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -36,11 +43,22 @@ return {
             on_attach = on_attach
         }
 
-        lspconfig.pylyzer.setup {
+        lspconfig.pylsp.setup {
             capabilities = capabilities,
             on_attach = on_attach,
-            handlers = {
-                ['textDocument/publishDiagnostics'] = function() end
+            settings = {
+                pylsp = {
+                    plugins = {
+                        pycodestyle = {
+                            maxLineLength = 120,
+                            ignore = {"E203"},
+                        },
+                        black = { 
+                            enabled = true,
+                            line_length = 120
+                        }
+                    }
+                }
             }
         }
 
