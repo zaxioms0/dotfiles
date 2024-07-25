@@ -43,37 +43,36 @@ return {
             on_attach = on_attach
         }
 
-        lspconfig.pylsp.setup {
+        -- lspconfig.pylsp.setup {
+        --     capabilities = capabilities,
+        --     on_attach = on_attach,
+        --     settings = {
+        --         pylsp = {
+        --             plugins = {
+        --                 pycodestyle = {
+        --                     maxLineLength = 120,
+        --                     ignore = {"E203", "W503"},
+        --                 },
+        --                 mccabe = {
+        --                     enabled = false,
+        --                 },
+        --                 black = { 
+        --                     enabled = true,
+        --                     line_length = 120
+        --                 }
+        --             }
+        --         }
+        --     }
+        -- }
+        --
+        lspconfig.pyright.setup {
             capabilities = capabilities,
             on_attach = on_attach,
-            settings = {
-                pylsp = {
-                    plugins = {
-                        pycodestyle = {
-                            maxLineLength = 120,
-                            ignore = {"E203"},
-                        },
-                        black = { 
-                            enabled = true,
-                            line_length = 120
-                        }
-                    }
-                }
-            }
         }
 
-        vim.g.rustaceanvim = function()
-            return {
-                -- other rustacean settings. --
-                server = {
-                on_attach = function()
-                    on_attach()
-                    vim.keymap.set("n", "<leader>ca", function() vim.cmd.RustLsp { "codeAction" } end, { buffer = bufnr })
-
-                -- other settings. -- 
-                end
-                }
-            }
-        end
+        lspconfig.rust_analyzer.setup {
+            capabilities = capabilities,
+            on_attach = on_attach
+        }
     end
 }
