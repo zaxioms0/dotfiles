@@ -1,21 +1,20 @@
 return {
     "neovim/nvim-lspconfig",
-    event = {"BufReadPre", "BufNewFile"},
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
         "hrsh7th/nvim-cmp"
     },
-    config = function() 
+    config = function()
         local lspconfig = require("lspconfig")
 
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
         local keymap = vim.keymap
-        local opts = {noremap = true, silent = true}
+        local opts = { noremap = true, silent = true }
         local on_attach = function(client, bufnr)
-
             opts.desc = "Show LSP References"
             keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
             keymap.set("n", "gt", vim.lsp.buf.definition, opts)
-            keymap.set("n", "gT", "<cmd> tab split | lua vim.lsp.buf.definition() <CR>", opts)
+            -- keymap.set("n", "gT", "<cmd> tab split | lua vim.lsp.buf.definition() <CR>", opts)
 
             opts.desc = "smart rename"
             keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
@@ -25,10 +24,10 @@ return {
             keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>")
 
             keymap.set("n", "H", vim.lsp.buf.hover)
-            vim.keymap.set({"n", "v"}, "<leader>fm", vim.lsp.buf.format)
+            vim.keymap.set({ "n", "v" }, "<leader>fm", vim.lsp.buf.format)
 
             vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
-            
+
             vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
                 vim.lsp.diagnostic.on_publish_diagnostics, {
                     virtual_text = false
@@ -37,11 +36,28 @@ return {
         end
 
         local capabilities = cmp_nvim_lsp.default_capabilities()
-
         lspconfig.clangd.setup {
             capabilities = capabilities,
             on_attach = on_attach
         }
+
+        lspconfig.ocamllsp.setup {
+            capabilities = capabilities,
+            on_attach = on_attach
+        }
+
+
+
+        lspconfig.lua_ls.setup {
+            capabilities = capabilities,
+            on_attach = on_attach
+        }
+        -- lspconfig.millet.setup {
+        --     cmd = { "/Users/z/.config/nvim/lua/plugins/lsp/lsp-bins/millet/target/release/millet-ls" },
+        --     capabilities = capabilities,
+        --     on_attach = on_attach
+        --
+        -- }
 
         -- lspconfig.pylsp.setup {
         --     capabilities = capabilities,
@@ -56,7 +72,7 @@ return {
         --                 mccabe = {
         --                     enabled = false,
         --                 },
-        --                 black = { 
+        --                 black = {
         --                     enabled = true,
         --                     line_length = 120
         --                 }
@@ -65,6 +81,12 @@ return {
         --     }
         -- }
         --
+        lspconfig.zls.setup {
+            cmd = { "/Users/z/.config/nvim/lua/plugins/lsp/lsp-bins/zls/zls" },
+            capabilities = capabilities,
+            on_attach = on_attach,
+        }
+
         lspconfig.pyright.setup {
             capabilities = capabilities,
             on_attach = on_attach,

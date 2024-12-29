@@ -1,6 +1,6 @@
 return {
     "hrsh7th/nvim-cmp",
-    event = {"InsertEnter", "CmdlineEnter"},
+    event = { "InsertEnter", "CmdlineEnter" },
     dependencies = {
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
@@ -15,23 +15,22 @@ return {
 
         vim.opt.pumheight = 10
         cmp.setup({
-            completion = {completeopt = "menu,menuone,preview,noselect"},
+            completion = { completeopt = "menu,menuone,preview,noselect" },
             snippet = {
                 expand = function(args)
                     luasnip.lsp_expand(args.body)
                 end,
             },
             sources = cmp.config.sources({
-                {name = "nvim_lsp"},
-                {name = "luasnip"},
-                {name = "buffer"},
-                {name = "path"}
+                { name = "nvim_lsp" },
+                { name = "luasnip" },
+                { name = "buffer" },
+                { name = "path" }
             }),
             mapping = cmp.mapping.preset.insert({
                 ["<tab>"] = cmp.mapping.select_next_item(),
-                ["<CR>"] = cmp.mapping.confirm({select = false})
+                ["<CR>"] = cmp.mapping.confirm({ select = false })
             })
-        }) 
-        
+        })
     end
 }
