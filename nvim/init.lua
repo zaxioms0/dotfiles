@@ -1,2 +1,4 @@
-require("general")
-require("lazy-conf")
+require("config.general")
+require("core.lazy")
+require("core.lsp")
+require("config.autocmds")

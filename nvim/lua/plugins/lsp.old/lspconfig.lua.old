@@ -38,7 +38,10 @@ return {
         local capabilities = cmp_nvim_lsp.default_capabilities()
         lspconfig.clangd.setup {
             capabilities = capabilities,
-            on_attach = on_attach
+            on_attach = on_attach,
+            clangd = function(_, opts)
+                table.insert(opts.cmd, "--query-driver=/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin/arm-none-eabi-g*")
+            end
         }
 
         lspconfig.ocamllsp.setup {

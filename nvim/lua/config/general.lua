@@ -10,7 +10,6 @@ vim.g.mapleader = "\\"
 -- line numbering
 -- absolute in insert mode
 -- relative in normal and visual
-vim.o.number = true
 -- vim.o.relativenumber = true
 --
 -- local autocmd = vim.api.nvim_create_autocmd
