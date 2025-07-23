@@ -6,7 +6,7 @@ vim.o.splitright = true
 vim.o.colorcolumn = "120"
 vim.wo.wrap = false
 vim.g.mapleader = "\\"
-
+vim.o.number = true
 -- line numbering
 -- absolute in insert mode
 -- relative in normal and visual

@@ -1,7 +1,8 @@
 vim.lsp.enable({
     "clangd",
     "rust-analyzer",
-    "lua_ls"
+    "lua_ls",
+    "basedpyright"
 })
 
 vim.diagnostic.config({

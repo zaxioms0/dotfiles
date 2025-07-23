@@ -7,7 +7,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { "c", "cpp", "rust", "lua", "markdown", "markdown_inline" },
+  pattern = { "c", "cpp", "rust", "lua", "markdown", "markdown_inline", "python" },
   callback = function() vim.treesitter.start() end,
 })
 
