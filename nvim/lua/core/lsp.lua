@@ -2,14 +2,14 @@ vim.lsp.enable({
     "clangd",
     "rust-analyzer",
     "lua_ls",
-    "basedpyright"
+    "basedpyright",
+    "ruff"
 })
 
 vim.diagnostic.config({
     -- virtual_lines = true,
     -- virtual_text = true,
-    underline = true, 
-    signs=true,
+    underline = true,
     update_in_insert = false,
     severity_sort = true,
     float = {

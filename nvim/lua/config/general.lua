@@ -3,6 +3,8 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.termguicolors = true
 vim.o.splitright = true
+vim.o.splitbelow = true
+vim.o.splitbelow = true
 vim.o.colorcolumn = "120"
 vim.wo.wrap = false
 vim.g.mapleader = "\\"
@@ -26,6 +28,7 @@ vim.o.number = true
 
 -- keybinds
 -- tab control
+vim.keymap.set("n", "<C-t>", "<Nop>")
 vim.keymap.set("n", "<C-t>n", "<cmd>tabnew<CR>")
 vim.keymap.set("n", "<C-t>h", "<cmd>tabp<CR>")
 vim.keymap.set("n", "<C-t>l", "<cmd>tabn<CR>")
