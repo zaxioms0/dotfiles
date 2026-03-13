@@ -23,11 +23,6 @@ return {
             },
 
         })
-
-        local keymap = vim.keymap
-
-        -- mode, command, executuion
-        -- normal mode, \t, command NvimTreeToggle <Return>
-        keymap.set("n", "<leader>tr", "<cmd>NvimTreeToggle<CR>")
+        require("config.keymaps").tree()
     end
 }

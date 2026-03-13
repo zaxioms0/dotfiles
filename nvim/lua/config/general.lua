@@ -9,6 +9,7 @@ vim.o.colorcolumn = "120"
 vim.wo.wrap = false
 vim.g.mapleader = "\\"
 vim.o.number = true
+vim.o.clipboard = "unnamedplus"
 -- line numbering
 -- absolute in insert mode
 -- relative in normal and visual
@@ -28,17 +29,7 @@ vim.o.number = true
 
 -- keybinds
 -- tab control
-vim.keymap.set("n", "<C-t>", "<Nop>")
-vim.keymap.set("n", "<C-t>n", "<cmd>tabnew<CR>")
-vim.keymap.set("n", "<C-t>h", "<cmd>tabp<CR>")
-vim.keymap.set("n", "<C-t>l", "<cmd>tabn<CR>")
-
--- fat finger protection
-vim.api.nvim_create_user_command('W', 'w', {})
-vim.api.nvim_create_user_command('WQ', 'wq', {})
-vim.api.nvim_create_user_command('Wq', 'wq', {})
-vim.api.nvim_create_user_command('Wqa', 'wqa', {})
-vim.api.nvim_create_user_command('Q', 'q', {})
+require("config.keymaps").general()
 
 vim.filetype.add({
     extension = {

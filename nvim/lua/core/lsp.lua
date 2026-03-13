@@ -1,10 +1,9 @@
-vim.lsp.enable({
-    "clangd",
-    "rust-analyzer",
-    "lua_ls",
-    "basedpyright",
-    "ruff"
-})
+local lsp_dir = vim.fn.stdpath("config") .. "/lsp"
+local servers = {}
+for _, file in ipairs(vim.fn.readdir(lsp_dir)) do
+    table.insert(servers,file:sub(1, -5))
+end
+vim.lsp.enable(servers)
 
 vim.diagnostic.config({
     -- virtual_lines = true,
