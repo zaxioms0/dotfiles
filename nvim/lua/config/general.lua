@@ -10,6 +10,7 @@ vim.wo.wrap = false
 vim.g.mapleader = "\\"
 vim.o.number = true
 vim.o.clipboard = "unnamedplus"
+vim.o.winborder = 'rounded'
 -- line numbering
 -- absolute in insert mode
 -- relative in normal and visual
