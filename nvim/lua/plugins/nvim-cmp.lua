@@ -2,7 +2,7 @@ return {
     "hrsh7th/nvim-cmp",
     event = { "InsertEnter", "CmdlineEnter" },
     dependencies = {
-        'hrsh7th/cmp-buffer',
+        "hrsh7th/cmp-buffer",
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-cmdline',
@@ -12,11 +12,11 @@ return {
         vim.opt.pumheight = 10
         cmp.setup({
             completion = { completeopt = "menu,menuone,preview,noselect" },
-            snippet = {
-                expand = function(args)
-                    luasnip.lsp_expand(args.body)
-                end,
-            },
+            -- snippet = {
+            --     expand = function(args)
+            --         luasnip.lsp_expand(args.body)
+            --     end,
+            -- },
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
                 { name = "buffer" },
